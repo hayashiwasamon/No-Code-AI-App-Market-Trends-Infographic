@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ノーコードAIアプリ市場トレンド インフォグラフィック</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Visualization & Content Choices:
+    - Market Growth (Market Potential): Goal: Change, Viz: Bar Chart (Chart.js), Justification: Shows trend over time. NO SVG.
+    - Prompt Base Evolution (Key Player): Goal: Change/Organize, Viz: HTML/CSS Timeline, Justification: Visually represents progression. NO SVG.
+    - Platform Comparison (Competitive Landscape): Goal: Compare, Viz: Radar Chart (Chart.js), Justification: Compares multiple platforms across several features. NO SVG.
+    - Monetization Models (Ecosystem): Goal: Inform/Compare, Viz: Donut Chart (Chart.js), Justification: Shows parts of a whole. NO SVG.
+    - LLM API Models (LLM Integration): Goal: Organize, Viz: HTML/CSS Diagram, Justification: Explains a process/concept. NO SVG.
+    - Community Roles (Ecosystem): Goal: Inform, Viz: HTML/CSS Icon List, Justification: Presents key roles visually. NO SVG.
+    - Future Trends (Future Outlook): Goal: Inform, Viz: HTML/CSS Icon List, Justification: Highlights key future aspects. NO SVG.
+    All textual content is extracted and summarized from the provided research report (ID: 5863bec5-ec52-4927-af5b-d611ca42f871) to support the narrative.
+    -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F7F7F7; color: #1A1A1A; }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .section-title { color: #FF6B6B; }
+        .card { background-color: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .kpi-value { color: #4ECDC4; font-weight: 700; }
+        .timeline-item::before { content: ''; position: absolute; left: -0.625rem; top: 0; width: 1.25rem; height: 1.25rem; border-radius: 9999px; background-color: #4ECDC4; border: 3px solid #F7F7F7; }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #FF6B6B; }
+        .sticky-nav { position: -webkit-sticky; position: sticky; top: 0; z-index: 50; background-color: rgba(247, 247, 247, 0.9); backdrop-filter: blur(8px); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="sticky-nav shadow-md py-3">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+                <li><a href="#introduction" class="nav-link text-sm md:text-base font-semibold text-gray-700">序論</a></li>
+                <li><a href="#market-overview" class="nav-link text-sm md:text-base font-semibold text-gray-700">市場概況</a></li>
+                <li><a href="#prompt-base" class="nav-link text-sm md:text-base font-semibold text-gray-700">Prompt Base</a></li>
+                <li><a href="#competition" class="nav-link text-sm md:text-base font-semibold text-gray-700">競争環境</a></li>
+                <li><a href="#technology" class="nav-link text-sm md:text-base font-semibold text-gray-700">技術連携</a></li>
+                <li><a href="#ecosystem" class="nav-link text-sm md:text-base font-semibold text-gray-700">エコシステム</a></li>
+                <li><a href="#future" class="nav-link text-sm md:text-base font-semibold text-gray-700">未来展望</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header id="introduction" class="text-center py-8 md:py-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 section-title">ノーコードAIアプリ革命</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">プロンプトベースAIアプリ構築の最前線を探る。市場トレンド、主要プレイヤー、技術、そして未来への展望をインフォグラフィックで解説します。</p>
+        </header>
+
+        <section id="market-overview" class="py-8">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title">市場の夜明け：パラダイムシフト</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">ノーコードAIとは？</h3>
+                    <p class="text-gray-600 mb-4">従来のプログラミングではなく、直感的なインターフェースと自然言語プロンプトを通じてAIアプリケーションを構築する手法。AI開発の民主化を推進します。</p>
+                    <h4 class="text-xl font-semibold mb-2 text-[#45B7D1]">市場成長の推進要因</h4>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>大規模言語モデル（LLM）の進歩</li>
+                        <li>カスタマイズAIソリューションへの需要増</li>
+                        <li>迅速なプロトタイピングと展開の必要性</li>
+                        <li>シチズンデベロッパー運動の広がり</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-center text-[#45B7D1]">市場の潜在性</h3>
+                    <p class="text-gray-600 mb-4 text-center">ノーコードAIアプリ市場は、専門知識なしにAIを活用したい企業や個人の需要の高まりを受け、急速な成長が見込まれています。</p>
+                    <div class="chart-container">
+                        <canvas id="marketGrowthChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2 text-center">（注：市場規模の成長イメージ。具体的な数値はレポートに非掲載のため概念図）</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="prompt-base" class="py-8">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title">注目プレイヤー：Prompt Baseの躍進</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">Prompt Baseの進化</h3>
+                    <div class="relative pl-8 py-4 border-l-2 border-[#4ECDC4]">
+                        <div class="timeline-item mb-6">
+                            <h4 class="font-semibold text-lg">プロンプトマーケットプレイス</h4>
+                            <p class="text-sm text-gray-600">DALL-E, Midjourney, GPT等向けAIプロンプト売買の場として確立。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">AIアプリビルダー機能追加</h4>
+                            <p class="text-sm text-gray-600">静的プロンプト販売から、インタラクティブなAIアプリ作成・販売プラットフォームへ戦略的拡大。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">ビジネスモデルの核心</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-700">手数料モデル</h4>
+                            <p class="text-gray-600">プロンプト販売に対し<span class="kpi-value">20%</span>の手数料。アプリ販売も同様の構造と推測。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-700">生成クレジット</h4>
+                            <p class="text-gray-600">アプリ実行に必要。獲得または購入可能。使用量ベースの収益源。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-700">プロンプト価格帯</h4>
+                            <p class="text-gray-600">多くが <span class="kpi-value">$1.99 - $9.99</span> 程度で販売。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competition" class="py-8">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title">競争環境：主要プラットフォーム比較</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="card text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-[#45B7D1]">Microsoft AI Builder</h3>
+                    <p class="text-sm text-gray-600">Power Platformと統合。ビジネス業務向けGPT活用。</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-[#45B7D1]">Replit AI (Agent)</h3>
+                    <p class="text-sm text-gray-600">自然言語からフルスタックアプリ生成を目指す。</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-[#45B7D1]">Bubble.io</h3>
+                    <p class="text-sm text-gray-600">強力なノーコードプラットフォームにAI機能を統合。</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-3 text-center text-[#45B7D1]">プラットフォームの強み比較（概念図）</h3>
+                <div class="chart-container" style="max-width: 500px;">
+                    <canvas id="platformComparisonChart"></canvas>
+                </div>
+                <p class="text-sm text-gray-500 mt-2 text-center">（注：各プラットフォームの特徴を相対的に示したイメージです）</p>
+            </div>
+        </section>
+
+        <section id="technology" class="py-8">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title">技術の核心：LLM連携</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">主要LLMサービス</h3>
+                    <p class="text-gray-600 mb-4">多くのプラットフォームは、OpenAI (GPTシリーズ), Cohere, Stability AI, Hugging Faceなどの主要LLMと連携して機能を提供しています。</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-[#FFD166] text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">OpenAI GPT</span>
+                        <span class="bg-[#4ECDC4] text-white px-3 py-1 rounded-full text-sm font-semibold">Cohere</span>
+                        <span class="bg-[#FF6B6B] text-white px-3 py-1 rounded-full text-sm font-semibold">Stability AI</span>
+                        <span class="bg-[#45B7D1] text-white px-3 py-1 rounded-full text-sm font-semibold">Hugging Face</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">API連携モデル</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-700">ユーザー提供APIキー</h4>
+                            <p class="text-sm text-gray-600">ユーザーが自身のLLM APIキーを設定。コストはユーザーが直接負担。</p>
+                        </div>
+                        <div class="text-center text-gray-400 my-2">または</div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-gray-700">バンドル型LLMアクセス</h4>
+                            <p class="text-sm text-gray-600">プラットフォームがLLMアクセスをサブスクリプションやクレジットに含めて提供。ユーザーは個別キー不要。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecosystem" class="py-8">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title">エコシステム：マーケットプレイスとコミュニティ</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">収益化モデルの多様性</h3>
+                     <div class="chart-container" style="height: 280px; max-height:350px;">
+                        <canvas id="monetizationModelsChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2 text-center">（注：一般的な収益化モデルの構成イメージ）</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-[#45B7D1]">コミュニティの力</h3>
+                    <p class="text-gray-600 mb-4">ユーザーコミュニティは、サポート、知識共有、イノベーション促進、プラットフォーム採用の推進力として不可欠です。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="text-xl mr-3 text-[#FF6B6B]">🤝</span>
+                            <span class="text-gray-700">サポートとトラブルシューティング</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-xl mr-3 text-[#4ECDC4]">💡</span>
+                            <span class="text-gray-700">知識共有とベストプラクティス交換</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-xl mr-3 text-[#45B7D1]">🚀</span>
+                            <span class="text-gray-700">イノベーションとフィードバック提供</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-xl mr-3 text-[#FFD166]">🔗</span>
+                            <span class="text-gray-700">コラボレーションとネットワーキング</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="py-8">
+            <h2 class="text-3xl font-bold text-center mb-8 section-title">未来展望：次の波</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 text-[#45B7D1]">AIモデルの高度化</h3>
+                    <p class="text-sm text-gray-600">より複雑なアプリがコードなしで構築可能に。</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 text-[#45B7D1]">マルチモーダルAIアプリ</h3>
+                    <p class="text-sm text-gray-600">テキスト、画像、動画、音声を統合。</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 text-[#45B7D1]">AIエージェントの普及</h3>
+                    <p class="text-sm text-gray-600">自律型AIエージェント作成が容易に。</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                 <p class="text-lg text-gray-700 max-w-2xl mx-auto">ノーコードAIアプリ開発は、技術の民主化と新たなクリエイターエコノミーを約束する成長分野です。LLMプロバイダー自身によるアプリ構築環境の提供や、倫理的課題への対応も今後の焦点となるでしょう。</p>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 mt-8 border-t border-gray-300">
+            <p class="text-sm text-gray-600">&copy; 2024 ノーコードAI市場トレンド調査インフォグラフィック. <br>本内容は提供された調査レポートに基づき作成されました。</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const CHART_COLORS = {
+            red: '#FF6B6B',
+            teal: '#4ECDC4',
+            blue: '#45B7D1',
+            yellow: '#FFD166',
+            purple: '#975E9A',
+            lightGray: '#E0E0E0'
+        };
+
+        function wrapLabels(labels, maxWidth) {
+            return labels.map(label => {
+                if (typeof label === 'string' && label.length > maxWidth) {
+                    const words = label.split(' ');
+                    let currentLine = '';
+                    const newLabel = [];
+                    for (const word of words) {
+                        if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                            newLabel.push(currentLine.trim());
+                            currentLine = '';
+                        }
+                        currentLine += word + ' ';
+                    }
+                    if (currentLine.length > 0) {
+                        newLabel.push(currentLine.trim());
+                    }
+                    return newLabel;
+                }
+                return label;
+            });
+        }
+        
+        const commonTooltipOptions = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                      return label.join(' ');
+                    } else {
+                      return label;
+                    }
+                }
+            }
+        };
+
+        const marketGrowthCtx = document.getElementById('marketGrowthChart').getContext('2d');
+        new Chart(marketGrowthCtx, {
+            type: 'bar',
+            data: {
+                labels: wrapLabels(['2022年', '2023年', '2024年 (推定)', '2025年 (予測)'], 16),
+                datasets: [{
+                    label: '市場規模指数',
+                    data: [100, 180, 300, 500],
+                    backgroundColor: CHART_COLORS.teal,
+                    borderColor: CHART_COLORS.teal,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, ticks: { color: '#1A1A1A' } },
+                    x: { ticks: { color: '#1A1A1A' } }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+
+        const platformComparisonCtx = document.getElementById('platformComparisonChart').getContext('2d');
+        new Chart(platformComparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: wrapLabels(['使いやすさ', '機能の豊富さ', 'コミュニティサポート', '価格競争力', '拡張性と柔軟性'], 16),
+                datasets: [
+                    {
+                        label: 'Prompt Base (イメージ)',
+                        data: [4, 3, 4, 4, 3],
+                        backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                        borderColor: CHART_COLORS.red,
+                        pointBackgroundColor: CHART_COLORS.red,
+                    },
+                    {
+                        label: 'Bubble.io (イメージ)',
+                        data: [3, 5, 5, 3, 5],
+                        backgroundColor: 'rgba(78, 205, 196, 0.2)',
+                        borderColor: CHART_COLORS.teal,
+                        pointBackgroundColor: CHART_COLORS.teal,
+                    },
+                     {
+                        label: 'Replit AI (イメージ)',
+                        data: [4, 4, 3, 4, 4],
+                        backgroundColor: 'rgba(69, 183, 209, 0.2)',
+                        borderColor: CHART_COLORS.blue,
+                        pointBackgroundColor: CHART_COLORS.blue,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: CHART_COLORS.lightGray },
+                        grid: { color: CHART_COLORS.lightGray },
+                        pointLabels: { font: { size: 10 }, color: '#1A1A1A' },
+                        ticks: { backdropColor: 'transparent', color: '#1A1A1A' }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top', labels: { color: '#1A1A1A' } },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+        
+        const monetizationModelsCtx = document.getElementById('monetizationModelsChart').getContext('2d');
+        new Chart(monetizationModelsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: wrapLabels(['コミッションベース', 'サブスクリプション', 'クレジット販売', 'テンプレート/アプリ販売'], 16),
+                datasets: [{
+                    label: '収益化モデル',
+                    data: [35, 30, 20, 15],
+                    backgroundColor: [CHART_COLORS.red, CHART_COLORS.teal, CHART_COLORS.blue, CHART_COLORS.yellow],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: '#1A1A1A' } },
+                    tooltip: commonTooltipOptions
+                }
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80; // Adjust for sticky nav height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
